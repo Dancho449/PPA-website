@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+main {
+    padding: 1em;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.img-logo {
+    width: 1.5em;
+
+}
+header {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 1em;
+    margin: 0;
+    box-shadow: 1px 1px 7px -1px rgba(0,0,0,0.45);
+}
+.heading > h2 {
+    display: none;
+}
+.heading {
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+.heading > h4 {
+    font-size: .875em;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: clamp(180px, 28%, 360px);
+    height: 100vh;
+    background-color: white;
+    color: rgb(124, 7, 124);
+    animation: slide 0.3s linear;
+    display: none;
+}
+@keyframes slide {
+    from {
+        transform: translateX(-380px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.navbar-logo {
+    max-width: 3em;
+}
+.hr {
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    padding-inline: 7px;
+    border-bottom: 1px solid purple;
+}
+.navbar-clear {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 7px;
+    right: 0;
+}
+.navbar-list {
+    margin-top: 7em;
+    margin-left: -23px;
+}
+.nav-list {
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 5px 7px;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+.nav-list:hover, .nav-list:focus {
+    background-color:rgb(124, 7, 124);
+    color: white;
+    margin-left: -10px;
+}
