@@ -264,9 +264,6 @@ header {
     margin: 1rem;
     border-radius: 1rem;
     text-align: center;
-    transition: box-shadow 0.3s ease;
-}
-.audio-home:hover, .audio-home:focus {
     box-shadow: 1px 1px 7px -1px rgba(0,0,0,0.55);
 }
 .audio-home > h2 {
