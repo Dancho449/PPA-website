@@ -3,10 +3,23 @@
 *::before {
     box-sizing: border-box;
 }
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+    --body-color: #fff;
+    --btn-color: #7C077C;
+}
+.dark-theme {
+    --primary-color: #212121;
+    --secondary-color: #fff;
+    --body-color: #212121;
+    --btn-color: #212121;
+}
 body {
     margin: 0;
     position: relative;
     font-family: sans-serif;
+    background-color: var(--body-color);
 }
 main {
     margin-top: 54px;
@@ -35,8 +48,8 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    background-color: white;
+    align-items: center;
+    background-color: var(--primary-color);
     padding: 0 1rem;
     margin: 0;
     box-shadow: 1px 1px 7px -1px rgba(0,0,0,0.45);
@@ -44,6 +57,7 @@ header {
 }
 .heading > h2 {
     display: none;
+    width: 70%;
 }
 .heading {
     display: flex;
@@ -52,6 +66,10 @@ header {
 }
 .heading > h4 {
     font-size: .875rem;
+    color: var(--secondary-color);
+}
+.light-dark {
+    display: none;
 }
 .hamburger {
     cursor: pointer;
@@ -60,6 +78,7 @@ header {
     background-color: transparent;
     display: flex;
     align-items: baseline;
+    color: var(--secondary-color);
 }
 .navbar-list {
     display: none;
@@ -85,7 +104,7 @@ header {
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
-    background-color: white;
+    background-color: var(--primary-color);
     color: rgb(124, 7, 124);
     animation: slide 0.4s linear;
     z-index: 1;
@@ -116,11 +135,12 @@ header {
     position: absolute;
     top: 7px;
     right: 5px;
+    color: var(--secondary-color);
 }
 .sidebar-list {
     margin-top: 3rem;
     padding-left: 10px;
-    color: rgb(49, 47, 47);
+    color: var(--secondary-color);
 }
 .side-list {
     cursor: pointer;
@@ -163,7 +183,7 @@ header {
     }
 }
 .welcome-container > h1 {
-    font-size: clamp(1.5rem, 5vw, 6rem);
+    font-size: clamp(1.5rem, 4vw, 5rem);
     font-weight: bolder;
     width: 70%;
 }
@@ -171,7 +191,7 @@ header {
     outline: 0;
     padding: 10px;
     border-radius: 20px;
-    width: clamp(130px, 25%, 13rem);
+    width: clamp(130px, 25%, 11rem);
     border: 1px solid rgb(161, 22, 161);
     background-color: rgb(165, 44, 165);
     color: white;
@@ -203,7 +223,7 @@ header {
 .about-home-text > h3 {
     margin-top: 2rem;
     text-align: center;
-    font-size: clamp(1.2rem, 4vw, 5rem);
+    font-size: clamp(1.2rem, 3.5vw, 4rem);
 }
 .about-home-text > p {
     font-size: 0.875rem;
@@ -226,42 +246,56 @@ header {
     border: black;
 }
 .founding-header {
-    font-size: clamp(1.5rem, 4vw, 5rem);
+    font-size: clamp(1.5rem, 3.2vw, 3.8rem);
     margin-block: 2rem;
     padding-inline: .5rem;
     text-align: center;
     text-transform: capitalize;
+    color: var(--secondary-color);
 }
 .ministers {
     padding-inline: 1rem;
 }
 .founder {
     width: 90%;
-    min-height: 27rem;
+    height: 28rem;
     border: 1px solid rgb(223, 218, 218);
     border-radius: 1rem;
     margin: 2rem auto;
     padding: 0 1rem 1rem 0;
     box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.45);
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.founder > img {
+    display: block;
+    margin: 1.5rem 0 0 1.2rem;
+    width: 85%;
+    height: 17.5rem;
+    border-radius: .6rem;
 }
 .founder-name {
     width: 100%;
     padding-inline: .5rem;
-    position: absolute;
-    bottom: 10%;
-
 }
 .founder-name > h3, 
 .founder-name > p {
     text-align: center;
+    color: var(--secondary-color);
 }
 .ministers-text {
     text-align: center;
     margin-bottom: 3rem;
 }
 .ministers-text > h2 {
-    font-size: clamp(1.5rem, 4vw, 5rem);
+    font-size: clamp(1.5rem, 3.5vw, 4rem);
+    color: var(--secondary-color);
+}
+.min-btn {
+    margin-top: -10px;
 }
 .audio-home {
     background-image: url(./images/headphones.jpg);
@@ -276,7 +310,7 @@ header {
 }
 .audio-home > h2 {
     color: white;
-    font-size: clamp(1.7rem, 4vw, 5rem);
+    font-size: clamp(1.5rem, 3vw, 4rem);
     text-transform: capitalize;
 }
 .audio-home > p {
@@ -355,19 +389,21 @@ header {
 }
 .daily-dev > .daily-dev-header1 {
     text-align: center;
-    font-size: clamp(1.5rem, 4vw, 5rem);
-    color: rgb(68, 6, 68);
+    font-size: clamp(1.5rem, 3.5vw, 4rem);
+    color: rgb(160, 57, 160);
     text-transform: capitalize;
     margin-bottom: 2rem;
 }
 .daily-dev > p {
     line-height: 1.5rem;
+    color: var(--secondary-color);
 }
 .btn-dev {
-    width: clamp(160px, 30%, 15rem);
+    width: clamp(150px, 28%, 13.4rem);
+    color: var(--primary-color);
 }
 .btn-dev:hover, .btn-dev:focus {
-    border: 1px solid rgb(124, 7, 124);
+    border: 1px solid var(--btn-color);
     color: rgb(124, 7, 124);
     background-color: white;
 }
@@ -382,7 +418,7 @@ header {
     color: white;
 }
 .born-again > h2 {
-    font-size: clamp(1.5rem, 4vw, 5rem);
+    font-size: clamp(1.5rem, 3.5vw, 4rem);
 }
 .born-again > h4 {
     font-size: .9rem;
@@ -433,13 +469,24 @@ footer {
 .sprites {
     margin-right: .6rem;
 }
+@media (min-width: 400px) {
+    .founder > img {
+        width: 65%;
+    }
+}
 @media (min-width: 630px) {
     .founders-container {
         width: 100%;
         display: flex;
-        align-items: baseline;
-        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
         padding: 1rem;
+    }
+    .founder {
+        width: 45%;
+    }
+    .founder > img {
+        width: 85%;
     }
     .audio-home {
         min-height: 15rem;
@@ -457,12 +504,17 @@ footer {
 @media (min-width: 800px) {
     .heading > h2 {
         display: block;
-        color: rgb(68, 6, 68);
+        color: var(--secondary-color);
         font-size: .9rem;
         cursor: pointer;
     }
     .heading > h4 {
         display: none;
+    }
+    .light-dark {
+        display: block;
+        width: 30px;
+        cursor: pointer;
     }
     .hamburger {
         display: none;
@@ -472,19 +524,26 @@ footer {
     }
     .navbar-list {
         display: flex;
+        flex: 1;
+        text-align: right;
         align-items: baseline;
-        gap: 1rem;
+        justify-content: center;
+        gap: 1.5rem;
     }
     .nav-list {
         cursor: pointer;
         font-size: .875rem;
-        color: rgb(68, 6, 68);
+        color: var(--secondary-color);
         transition: all 0.3s ease;
         font-weight: bold;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 1.5rem;
     }
     .nav-list:hover, .nav-list:focus {
         transform: scale(1.2);
-        color: blueviolet;
+        color: rgb(128, 18, 128);
     }
     .welcome-pg {
         min-height: 90vh;
@@ -502,7 +561,7 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        color: #312e2e;
+        color: var(--secondary-color);
         box-shadow: 2px 2px 10px -1px rgba(8,7,7,0.74);
     }
     .accordion-extra-info > h2 {
@@ -514,7 +573,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #312e2e;
+        border-bottom: 1px solid var(--secondary-color);
         cursor: pointer;
     }
     .accordion-text > h3 {
@@ -524,7 +583,7 @@ footer {
         border: 0;
         outline: 0;
         background-color: transparent;
-        color: white;
+        color: var(--secondary-color);
         font-size: 1.1rem;
         font-weight: bold;
         cursor: pointer;
@@ -536,12 +595,21 @@ footer {
         height: 0;
         overflow: hidden;
         transition: all 0.3s ease;
+        color: var(--secondary-color);
     }
     .accordion-extra-info .holder.active .hidden-accordion-text {
         height: 4rem;
     }
     .accordion-extra-info .holder.active .accordion-text .hide-btn {
         transform: rotate(45deg);
+    }
+    .founder > img {
+        margin: 2rem 0 0 0;
+        width: 65%;
+        min-height: 20rem;
+    }
+    .founder {
+        width: 40%;
     }
     .hidden-daily-dev {
         display: inline;
