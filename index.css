@@ -61,9 +61,12 @@ header {
     display: flex;
     align-items: baseline;
 }
+.navbar-list {
+    display: none;
+}
 .side-menu {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,12 +75,16 @@ header {
     display: none;
     transition: all 1s ease;
 }
-.navbar {
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: clamp(180px, 28%, 360px);
     height: 100vh;
+    background-image: url(./images/nav-wave2.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
     background-color: white;
     color: rgb(124, 7, 124);
     animation: slide 0.4s linear;
@@ -91,7 +98,7 @@ header {
         transform: translateX(0);
     }
 }
-.navbar-logo {
+.sidebar-logo {
     max-width: 3em;
 }
 .hr {
@@ -101,7 +108,7 @@ header {
     border-bottom: 2px solid purple;
     text-align: center;
 }
-.navbar-clear {
+.sidebar-clear {
     cursor: pointer;
     outline: 0;
     border: 0;
@@ -110,11 +117,12 @@ header {
     top: 7px;
     right: 5px;
 }
-.navbar-list {
+.sidebar-list {
     margin-top: 3rem;
     padding-left: 10px;
+    color: rgb(49, 47, 47);
 }
-.nav-list {
+.side-list {
     cursor: pointer;
     margin-top: 15px;
     padding: 5px 7px;
@@ -122,7 +130,7 @@ header {
     font-weight: bold;
     transition: all 0.4s ease;
 }
-.nav-list:hover, .nav-list:focus {
+.side-list:hover, .side-list:focus {
     background-color:rgb(124, 7, 124);
     color: white;
     margin-left: -10px;
@@ -133,7 +141,7 @@ header {
     background-position: center;
     background-size: cover;
     padding-top: 1em;
-    height: 65vh;
+    min-height: 65vh;
     color: rgb(255, 255, 255);
     position: relative;
 }
@@ -176,9 +184,9 @@ header {
     background-color: rgb(71, 9, 71);
     border: 1px solid rgb(71, 9, 71);
 }
-.column-extra-info, 
+.accordion-extra-info, 
 .about-home-text > h2, 
-.hidden {
+.hidden-daily-dev {
     display: none;
 }
 .about-home {
@@ -228,7 +236,7 @@ header {
     padding-inline: 1rem;
 }
 .founder {
-    max-width: 90%;
+    width: 90%;
     min-height: 27rem;
     border: 1px solid rgb(223, 218, 218);
     border-radius: 1rem;
@@ -325,11 +333,11 @@ header {
    border-radius: 1rem;
    background-image: url(./images/wave.svg);
    background-repeat: no-repeat;
-   background-position: top;
-    background-size: cover;
+   background-position: 50% 35%;
+   background-size: cover;
 }
 .first-timer-text > h2 {
-    font-size: clamp(1.5rem, 4vw, 5rem); 
+    font-size: clamp(1.5rem, 3.5vw, 4rem); 
     padding-top: 20px;
     color: white;
 }
@@ -352,6 +360,9 @@ header {
     text-transform: capitalize;
     margin-bottom: 2rem;
 }
+.daily-dev > p {
+    line-height: 1.5rem;
+}
 .btn-dev {
     width: clamp(160px, 30%, 15rem);
 }
@@ -359,6 +370,9 @@ header {
     border: 1px solid rgb(124, 7, 124);
     color: rgb(124, 7, 124);
     background-color: white;
+}
+.img-slider {
+    display: none;
 }
 .born-again {
     padding: 1rem;
@@ -375,6 +389,7 @@ header {
 }
 .born-again > p {
     font-size: .8rem;
+    line-height: 1.3rem;
 }
 .form {
     width: 100%;
@@ -384,6 +399,7 @@ header {
     outline: 0;
     border: 0;
     background-color: rgba(255, 255, 255, 0.3);
+    color: white;
     padding: .5rem;
     margin-top: .4rem;
     backdrop-filter: blur(4px);
@@ -416,4 +432,124 @@ footer {
 }
 .sprites {
     margin-right: .6rem;
+}
+@media (min-width: 630px) {
+    .founders-container {
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .audio-home {
+        min-height: 15rem;
+    }
+    .first-timer-text {
+        min-height: 20rem;
+    }
+    .btn2 {
+        margin-top: 5rem;
+    }
+    .btn-aud {
+        margin-top: 1.5rem;
+    }
+}
+@media (min-width: 800px) {
+    .heading > h2 {
+        display: block;
+        color: rgb(68, 6, 68);
+        font-size: .9rem;
+        cursor: pointer;
+    }
+    .heading > h4 {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    main {
+        margin-top: 0;
+    }
+    .navbar-list {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+    }
+    .nav-list {
+        cursor: pointer;
+        font-size: .875rem;
+        color: rgb(68, 6, 68);
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+    .nav-list:hover, .nav-list:focus {
+        transform: scale(1.2);
+        color: blueviolet;
+    }
+    .welcome-pg {
+        min-height: 90vh;
+    }
+    .accordion-extra-info {
+        display: block;
+        width: 70%;
+        min-height: 23rem;
+        margin: 3rem auto;
+        padding: .7rem 1.3rem;
+        border: 1px solid rgb(173, 167, 173);
+        border-radius: 1rem;
+        /*background-color: rgba(0, 0, 0, .1);*/
+        background-image: url(./images/nav-wave.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: #312e2e;
+        box-shadow: 2px 2px 10px -1px rgba(8,7,7,0.74);
+    }
+    .accordion-extra-info > h2 {
+        text-align: center;
+        font-size: clamp(1.4rem, 1.8rem, 2.5rem);
+        margin: 2rem 0 2.5rem 0;
+    }
+    .accordion-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #312e2e;
+        cursor: pointer;
+    }
+    .accordion-text > h3 {
+        font-size: 1rem;
+    }
+    .hide-btn {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .5s ease;
+    }
+    .hidden-accordion-text {
+        margin-top: 15px;
+        line-height: 1.5rem;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .accordion-extra-info .holder.active .hidden-accordion-text {
+        height: 4rem;
+    }
+    .accordion-extra-info .holder.active .accordion-text .hide-btn {
+        transform: rotate(45deg);
+    }
+    .hidden-daily-dev {
+        display: inline;
+    }
+    .form > input {
+        padding: .7rem;
+    }
+    .form > button {
+        font-weight: bold;
+    }
 }
