@@ -10,6 +10,8 @@ const reveal = document.querySelectorAll(".holder");
 
 const icon = document.querySelector(".light-dark");
 
+const icon2 = document.querySelector(".light-dark2");
+
 btn.addEventListener('click', function() {
     container.style.display = "block"
 })
@@ -38,3 +40,13 @@ icon.addEventListener('click', function() {
         icon.src = "./images/moon.PNG"
     }
 })
+
+icon2.addEventListener('click', function() {
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        icon2.src = "./images/sun.PNG"
+    }else{
+        icon2.src = "./images/moon.PNG"
+    }
+})
+

@@ -68,7 +68,7 @@ header {
     font-size: .875rem;
     color: var(--secondary-color);
 }
-.light-dark {
+header > .light-dark {
     display: none;
 }
 .hamburger {
@@ -104,7 +104,7 @@ header {
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
-    background-color: var(--primary-color);
+    background-color: var(--body-color);
     color: rgb(124, 7, 124);
     animation: slide 0.4s linear;
     z-index: 1;
@@ -116,6 +116,23 @@ header {
     to {
         transform: translateX(0);
     }
+}
+.ld-toggle {
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.ld-toggle > span {
+    font-size: .875rem;
+    color: var(--secondary-color);
+}
+.light-dark2 {
+    display: block;
+    width: 30px;
+    cursor: pointer;
 }
 .sidebar-logo {
     max-width: 3em;
@@ -511,7 +528,7 @@ footer {
     .heading > h4 {
         display: none;
     }
-    .light-dark {
+    header > .light-dark {
         display: block;
         width: 30px;
         cursor: pointer;
