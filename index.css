@@ -540,7 +540,7 @@ footer {
         transition: all 0.3s ease;
         font-weight: bold;
         display: inline-block;
-        margin: 10px 1.3rem;
+        margin: 10px 1rem;
     }
     .nav-list:hover, .nav-list:focus {
         transform: scale(1.2);
