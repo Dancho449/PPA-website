@@ -160,6 +160,9 @@ header > .light-dark {
     padding-left: 10px;
     color: var(--secondary-color);
 }
+.side-list > a {
+    color: var(--secondary-color);
+}
 .side-list {
     cursor: pointer;
     margin-top: 15px;
@@ -541,6 +544,9 @@ footer {
         font-weight: bold;
         display: inline-block;
         margin: 10px 1rem;
+    }
+    .nav-list > a {
+        color: var(--secondary-color);
     }
     .nav-list:hover, .nav-list:focus {
         transform: scale(1.2);
