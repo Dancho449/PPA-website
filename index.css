@@ -615,7 +615,7 @@ footer {
         color: var(--secondary-color);
     }
     .accordion-extra-info .holder.active .hidden-accordion-text {
-        height: 4rem;
+        height: 4.5rem;
     }
     .accordion-extra-info .holder.active .accordion-text .hide-btn {
         transform: rotate(45deg);
