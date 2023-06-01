@@ -20,6 +20,7 @@ body {
     position: relative;
     font-family: sans-serif;
     background-color: var(--body-color);
+    font-family: 'Poppins', serif;
 }
 main {
     margin-top: 54px;
@@ -347,34 +348,22 @@ header > .light-dark {
     display: block;
     border: 0;
     outline: 0;
-    background-color: transparent;
-    color: rgb(53, 47, 47);
+    background-image: linear-gradient(180deg, rgb(182, 35, 182), blueviolet);
+    color: var(--body-color);
     font-weight: bold;
     font-size: .9rem;
     padding: 0.5em;
-    margin: 1.4rem auto;
-    position: relative;
-    transform: color 175ms ease;
+    margin: 2.5rem auto 1.4rem;
+    width: clamp(150px, 15%, 200px);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
 }
-.btn2:hover,
-.btn2:focus {
-    color: white;
-}
-.btn2::after {
-    content: "";
-    position: absolute;
-    background-color: rgb(146, 66, 146);
-    height: .85rem;
-    width: 75%;
-    left: 0;
-    top: 50%;
-    z-index: -1;
-    transition: transfrom 250ms cubic-bezier(.91,0,.55,1.64);
-    transform-origin: bottom left;
-}
-.btn2:hover::after,
-.btn2:focus::after {
-    transform: scale(1.35, 1.85);
+.btn2:hover, .btn2:focus {
+    transform: scale(1.05);
+    background-color: white;
+    background-image: none;
+    color: rgb(124, 7, 124);
+    border: 1px solid var(--btn-color);
 }
 .first-timer {
     padding: 1rem;
@@ -384,7 +373,7 @@ header > .light-dark {
    border-radius: 1rem;
    background-image: url(./images/wave.svg);
    background-repeat: no-repeat;
-   background-position: 50% 35%;
+   background-position: 50% 40%;
    background-size: cover;
 }
 .first-timer-text > h2 {
@@ -416,7 +405,7 @@ header > .light-dark {
     color: var(--secondary-color);
 }
 .btn-dev {
-    width: clamp(150px, 28%, 13.4rem);
+    width: clamp(160px, 28%, 13.4rem);
     color: var(--primary-color);
 }
 .btn-dev:hover, .btn-dev:focus {
@@ -540,12 +529,9 @@ footer {
         margin-top: 0;
     }
     .navbar-list {
-        display: flex;
+        display: block;
         flex: 1;
         text-align: right;
-        align-items: baseline;
-        justify-content: center;
-        gap: 1.5rem;
     }
     .nav-list {
         cursor: pointer;
@@ -553,10 +539,8 @@ footer {
         color: var(--secondary-color);
         transition: all 0.3s ease;
         font-weight: bold;
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-        gap: 1.5rem;
+        display: inline-block;
+        margin: 10px 1.3rem;
     }
     .nav-list:hover, .nav-list:focus {
         transform: scale(1.2);
@@ -580,6 +564,7 @@ footer {
         background-position: center;
         color: var(--secondary-color);
         box-shadow: 2px 2px 10px -1px rgba(8,7,7,0.74);
+        font-family: 'Poppins', serif;
     }
     .accordion-extra-info > h2 {
         text-align: center;
