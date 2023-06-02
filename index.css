@@ -23,7 +23,7 @@ body {
     font-family: 'Poppins', serif;
 }
 main {
-    margin-top: 54px;
+    margin-top: 58px;
 }
 ul {
     list-style-type: none;
@@ -172,9 +172,11 @@ header > .light-dark {
     transition: all 0.4s ease;
 }
 .side-list:hover, .side-list:focus {
-    background-color:rgb(124, 7, 124);
-    color: white;
+    background-color:rgb(124, 7, 124);;
     margin-left: -10px;
+}
+.side-list:hover > a, .side-list:focus > a {
+    color: white;
 }
 .welcome-pg {
     background-image: url(./images/new-img.jpg);
@@ -256,8 +258,10 @@ header > .light-dark {
     margin: 2.8rem auto;
     background-color: white;
     border: 1px solid white;
-    color: rgb(65, 30, 97);
     transition: all 0.3s ease;
+}
+.about > a {
+    color: rgb(65, 30, 97);
 }
 .about:hover,
 .about:focus {
@@ -265,6 +269,10 @@ header > .light-dark {
     background-color: black;
     color: white;
     border: black;
+}
+.about:hover > a,
+.about:focus > a {
+    color: #fff;
 }
 .founding-header {
     font-size: clamp(1.5rem, 3.2vw, 3.8rem);
@@ -477,6 +485,43 @@ footer {
 }
 .sprites {
     margin-right: .6rem;
+}
+.contactz {
+    height: 100vh;
+    background-color: transparent;
+}
+.main-contact-content {
+    margin-top: 50px;
+    width: 100%;
+}
+.contact-pg-logo {
+    width: 70%;
+    margin: 5.4rem auto 0;
+    padding-bottom: .6rem;
+    text-align: center;
+    border-bottom: 3px solid rgb(124, 7, 124);
+}
+.contact-pg-logo {
+    width: (81px, 4rem, 6.5rem);
+}
+.church-contacts {
+    padding: 1rem;
+    text-align: center;
+}
+.church-contacts > h3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--secondary-color);
+}
+.ministerz {
+    background-color: transparent;
+}
+.minister-pg {
+    margin-top: 6.5rem;
+}
+.minister-pg-header {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: var(--secondary-color);
+    text-align: center;
 }
 @media (min-width: 400px) {
     .founder > img {
