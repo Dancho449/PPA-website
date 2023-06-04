@@ -10,7 +10,12 @@ for(i = 0; i < vmvContainer.length; i++){
 })}
 
 for(i = 0; i < vmvContainer.length; i++){
-    vmvContainer[i].addEventListener('mouseover', function(){
+    vmvContainer[i].addEventListener('mouseenter', function(e){
+        this.classList.toggle("display");
+    })
+}
+for(i = 0; i < vmvContainer.length; i++){
+    vmvContainer[i].addEventListener('mouseleave', function(e){
         this.classList.toggle("display");
     })
 }
@@ -48,6 +53,7 @@ const elongateOne = document.querySelector("#elongate-one");
 const elongateTwo = document.querySelector("#elongate-two"); 
 const elongateThree = document.querySelector("#elongate-three"); 
 const elongateFour = document.querySelector("#elongate-four"); 
+const elongateFive = document.querySelector("#elongate-five"); 
 
 jan.addEventListener('click', function(){
     janText.classList.toggle("showanchor");
@@ -85,6 +91,14 @@ may.addEventListener("click", function(){
     mayText.classList.toggle("showanchor");
     elongateFour.classList.toggle("showanchor");
 });
+const june = document.querySelector(".june");
+const juneText = document.querySelector("#june-text");
+
+june.addEventListener("click", function(){
+    juneText.classList.toggle("showanchor");
+    elongateFive.classList.toggle("showanchor");
+
+})
 
 
 const unavailables = document.querySelectorAll(".unavailable");
