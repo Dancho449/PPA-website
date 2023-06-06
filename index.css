@@ -486,8 +486,12 @@ footer {
 .sprites {
     margin-right: .6rem;
 }
-.sprites > .fa-facebook-f, .fa-instagram, .fa-twitter, .fa-youtube {
+.sprites > .fa-facebook-f, 
+.sprites > .fa-instagram, 
+.sprites > .fa-twitter, 
+.sprites > .fa-youtube {
     color: #dcc3df;
+    font-size: 1rem;
 }
 .contactz {
     height: 100vh;
@@ -529,11 +533,14 @@ footer {
     text-align: center;
 }
 .contacts-social > .sprites {
-    margin-right: 4rem;
+    margin-right: 2.6rem;
 }
-.contct-sprite > .fa-facebook-f, .fa-instagram, .fa-twitter, .fa-youtube {
+.contct-sprite > .fa-facebook-f, 
+.contct-sprite > .fa-instagram, 
+.contct-sprite > .fa-twitter, 
+.contct-sprite > .fa-youtube {
     color: #bf88c5;
-    font-size: 1.6rem;
+    font-size: clamp(16px, 1.4rem, 1.6rem);
 }
 /*.contact-body {
     background-image: url(./images/contact-svg.svg);
@@ -683,7 +690,7 @@ footer {
         color: var(--secondary-color);
     }
     .accordion-extra-info .holder.active .hidden-accordion-text {
-        height: 4.5rem;
+        height: 5rem;
     }
     .accordion-extra-info .holder.active .accordion-text .hide-btn {
         transform: rotate(45deg);
@@ -706,6 +713,14 @@ footer {
     .hidden-daily-dev {
         display: inline;
     }
+    .form > input {
+        padding: .7rem;
+    }
+    .form > button {
+        font-weight: bold;
+    }
+}
+ @media (min-width: 800px) {
     .img-slider-container {
         display: block;
         padding: 1rem;
@@ -793,10 +808,4 @@ footer {
     #radio4:checked ~ .navigation-auto > .auto-btn4 {
         background-color: rgb(182, 49, 182);
     }
-    .form > input {
-        padding: .7rem;
-    }
-    .form > button {
-        font-weight: bold;
-    }
-}
+ }
