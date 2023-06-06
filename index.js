@@ -50,3 +50,15 @@ icon2.addEventListener('click', function() {
     }
 })
 
+let counter = 1;
+const radio = document.getElementById('radio' + counter).checked;
+
+setInterval(function(){
+    if(radio === true){
+        counter++
+        if(counter > 4){
+            counter = 1;
+        }
+    }
+}, 5000);
+
