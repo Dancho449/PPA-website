@@ -338,6 +338,7 @@ span{
     }
     header > .navbar-list {
         display: block;
+        margin-right: .7rem;
     }
     .nav-list {
         cursor: pointer;
@@ -443,7 +444,7 @@ span{
     text-align: center;
 }
 .head{
-    margin-top: 20%;
+    margin-top: 10%;
 }
 .head p{
     margin-top: 30px;
@@ -764,7 +765,8 @@ table{
 #elongate-one, 
 #elongate-two, 
 #elongate-three, 
-#elongate-four{
+#elongate-four,
+#elongate-five{
     width: 8%;
 }
 .ppa-assembly{

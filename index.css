@@ -347,8 +347,8 @@ header > .light-dark {
     font-weight: bold;
     color: rgb(255, 255, 255);
 }
-.btn-aud:hover, 
-.btn-aud:focus {
+.audio-link > .btn-aud:hover, 
+.audio-link > .btn-aud:focus {
     transform: scale(1.1);
     background-color: white;
     border: 1px solid white;
