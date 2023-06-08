@@ -323,7 +323,7 @@ header > .light-dark {
     font-size: clamp(1.5rem, 3.5vw, 4rem);
     color: var(--secondary-color);
 }
-.min-btn {
+.ministers-link > .min-btn {
     margin-top: -10px;
 }
 .audio-home {
