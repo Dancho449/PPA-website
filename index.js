@@ -2,6 +2,8 @@ const btn = document.querySelector(".hamburger");
 
 const container = document.querySelector(".side-menu");
 
+const menu = document.querySelector('.sidebar')
+
 const clear = document.querySelector(".sidebar-clear");
 
 const head = document.querySelector("header");
@@ -13,16 +15,19 @@ const icon = document.querySelector(".light-dark");
 const icon2 = document.querySelector(".light-dark2");
 
 btn.addEventListener('click', function() {
-    container.style.display = "block"
+    container.style.left = "0"
+    menu.style.left = "0"
 })
 
 clear.addEventListener('click', function() {
-    container.style.display = "none"
+    container.style.left = "-100%"
+    menu.style.left = "-190px"
 })
 
 window.addEventListener('click', function(e) {
     if(e.target === container || e.target === head) {
-        container.style.display = "none"
+        container.style.left = "-100%"
+        menu.style.left = "-190px"
     }
 })
 

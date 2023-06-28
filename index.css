@@ -89,17 +89,16 @@ header > .light-dark {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     background-color: rgba(0, 0, 0, .6);
     z-index: 1;
-    display: none;
-    transition: all 1s ease;
+    transition: left 0.2s ease;
 }
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
-    width: clamp(180px, 28%, 360px);
+    left: -190px;
+    width: 180px/*clamp(180px, 28%, 360px)*/;
     height: 100vh;
     background-image: url(./images/nav-wave2.svg);
     background-repeat: no-repeat;
@@ -107,7 +106,8 @@ header > .light-dark {
     background-size: cover;
     background-color: var(--body-color);
     color: rgb(124, 7, 124);
-    animation: slide 0.4s linear;
+    transition: left 0.3s ease;
+    /*animation: slide 0.4s linear;*/
     z-index: 1;
 }
 @keyframes slide {
